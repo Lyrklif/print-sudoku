@@ -5,6 +5,9 @@ import {useSelector, useDispatch} from 'react-redux';
 import fluids from "./actions/fluids/fluids";
 
 import SettingsPanel from './components/SettingsPanel';
+import Preview from './components/Preview';
+
+
 
 const App = () => {
   const store = useSelector(state => state);
@@ -14,6 +17,7 @@ const App = () => {
   return (
     <>
       <SettingsPanel />
+      <Preview />
     </>
   )
 };

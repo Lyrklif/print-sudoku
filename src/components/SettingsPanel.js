@@ -43,7 +43,7 @@ const SettingsPanel = () => {
       </FormControl>
 
 
-      <Typography id="discrete-slider" gutterBottom>
+      <Typography gutterBottom>
         Количество блоков на странице
       </Typography>
       <Slider
