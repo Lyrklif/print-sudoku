@@ -1,19 +1,23 @@
-import React, {useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Box from '@material-ui/core/Box';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import TextField from '@material-ui/core/TextField';
 
+import fluids from '../actions/fluids/fluids';
 import level from '../actions/generatorSettings/level';
 import blocksOnSheet from '../actions/generatorSettings/blocksOnSheet';
 import numberOfSheet from '../actions/generatorSettings/numberOfSheet';
 
+
+import { makepuzzle, solvepuzzle } from "sudoku";
 
 const SettingsPanel = () => {
   const store = useSelector(state => state);
@@ -23,6 +27,25 @@ const SettingsPanel = () => {
     let value = e.target.value;
     if (value > 0 && value <= 100) dispatch(numberOfSheet(value))
   };
+
+  const getSudokuArray = () => {
+    var puzzle = makepuzzle();
+    var solution = solvepuzzle(puzzle);
+
+    return solution;
+  }
+
+  const setSudokuArray = () => {
+    let array = [];
+
+    let count = store.generatorSettings.blocksOnSheet * store.generatorSettings.numberOfSheet;
+
+    for (let i = 0; i < count; i++) {
+      array[i] = getSudokuArray();      
+    }
+
+    dispatch(fluids(array));
+  }
 
   return (
     <Box m={3} p={3}>
@@ -64,6 +87,11 @@ const SettingsPanel = () => {
         value={store.generatorSettings.numberOfSheet}
         onChange={changeNumberOfSheet}
       />
+
+
+      <Button variant="contained" color="primary" onClick={setSudokuArray}>
+        Создать судоку
+      </Button>
 
     </Box>
   )

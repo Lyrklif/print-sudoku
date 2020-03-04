@@ -1,5 +1,6 @@
 export default {
-  fluids: [],
+  fluids: [
+  ],
 
   generatorSettings: {
     level: 1,

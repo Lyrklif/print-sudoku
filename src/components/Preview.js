@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Box from '@material-ui/core/Box';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -22,10 +22,11 @@ const Preview = () => {
 
   return (
     <Box m={3} p={3}>
-результат
+      результат
+<Sudoku />
 
       {store.fluids.map((block, index) => {
-        return <Sudoku />
+        return <Sudoku key={index} />
       })}
 
     </Box>
