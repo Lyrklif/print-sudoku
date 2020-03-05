@@ -33,19 +33,18 @@ const SettingsPanel = () => {
     var solution = solvepuzzle(puzzle);
 
     return solution;
-  }
+  };
 
   const setSudokuArray = () => {
     let array = [];
-
     let count = store.generatorSettings.blocksOnSheet * store.generatorSettings.numberOfSheet;
 
     for (let i = 0; i < count; i++) {
-      array[i] = getSudokuArray();      
+      array[i] = getSudokuArray();
     }
 
     dispatch(fluids(array));
-  }
+  };
 
   return (
     <Box m={3} p={3}>
