@@ -19,6 +19,8 @@ import numberOfSheet from '../actions/generatorSettings/numberOfSheet';
 
 import { makepuzzle, solvepuzzle } from "sudoku";
 
+import getSudokuArray from '../hooks/getSudokuArray';
+
 const SettingsPanel = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
@@ -28,14 +30,11 @@ const SettingsPanel = () => {
     if (value > 0 && value <= 100) dispatch(numberOfSheet(value))
   };
 
-  const getSudokuArray = () => {
-    var puzzle = makepuzzle();
-    var solution = solvepuzzle(puzzle);
-
-    return solution;
+  const setSudokuArray = () => {
+    dispatch(fluids(createSudokuArray()));
   };
 
-  const setSudokuArray = () => {
+  const createSudokuArray = () => {
     let array = [];
     let count = store.generatorSettings.blocksOnSheet * store.generatorSettings.numberOfSheet;
 
@@ -43,7 +42,7 @@ const SettingsPanel = () => {
       array[i] = getSudokuArray();
     }
 
-    dispatch(fluids(array));
+    return array;
   };
 
   return (
