@@ -21,8 +21,7 @@ const Preview = () => {
   const dispatch = useDispatch();
 
   return (
-    <Box m={3} p={3}>
-      результат
+    <Box m={3} className="preview">
 
       {store.fluids.map((block, index) => {
         return <Sudoku key={index} array={block}/>

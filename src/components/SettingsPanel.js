@@ -48,7 +48,7 @@ const SettingsPanel = () => {
   };
 
   return (
-    <Box m={3} p={3}>
+    <Box m={3} p={3} className="no-print">
 
       <FormControl variant="outlined">
         <InputLabel>
@@ -76,7 +76,7 @@ const SettingsPanel = () => {
         step={1}
         marks
         min={1}
-        max={8}
+        max={9}
       />
 
 

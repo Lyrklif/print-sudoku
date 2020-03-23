@@ -12,9 +12,16 @@ code {
     monospace;
 }
 
+.preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4vw;
+}
+
 .sudoku {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
+  page-break-inside: avoid;
 }
 
 .sudoku__col {
@@ -64,6 +71,25 @@ code {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 4.2vw;
+  font-size: 2vw;
   white-space: nowrap;
+}
+
+
+
+/* Настройки печати */
+@media print {
+
+  .no-print {
+    display: none !important;
+  }
+
+  .preview {
+    display: grid !important;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
 }
