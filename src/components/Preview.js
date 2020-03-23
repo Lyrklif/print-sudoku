@@ -23,10 +23,9 @@ const Preview = () => {
   return (
     <Box m={3} p={3}>
       результат
-      <Sudoku/>
 
       {store.fluids.map((block, index) => {
-        return <Sudoku key={index}/>
+        return <Sudoku key={index} array={block}/>
       })}
 
     </Box>

@@ -19,17 +19,25 @@ import numberOfSheet from '../actions/generatorSettings/numberOfSheet';
 
 
 
-const Preview = () => {
+const Sudoku = (props) => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
 
+  const array = props.array.map((number, index) => {
+    return (
+      <Box key={index} className="sudoku__col">
+        <span className="sudoku__number">{number}</span>
+      </Box>
+    )
+  });
+
 
   return (
-    <Box >
-      t
+    <Box className="sudoku">
+      {array}
     </Box>
   )
 };
 
-export default Preview;
+export default Sudoku;
 

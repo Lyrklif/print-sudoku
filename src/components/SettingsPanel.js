@@ -42,6 +42,8 @@ const SettingsPanel = () => {
       array[i] = getSudokuArray();
     }
 
+    console.log(array);
+
     return array;
   };
 
