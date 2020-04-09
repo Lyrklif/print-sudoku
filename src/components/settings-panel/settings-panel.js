@@ -11,15 +11,16 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import TextField from '@material-ui/core/TextField';
 
-import fluids from '../actions/fluids/fluids';
-import level from '../actions/generatorSettings/level';
-import blocksOnSheet from '../actions/generatorSettings/blocksOnSheet';
-import numberOfSheet from '../actions/generatorSettings/numberOfSheet';
+import fluids from '../../actions/fluids/fluids';
+import level from '../../actions/generatorSettings/level';
+import blocksOnSheet from '../../actions/generatorSettings/blocksOnSheet';
+import numberOfSheet from '../../actions/generatorSettings/numberOfSheet';
+import countBlocksOnSheet from '../../actions/generatorSettings/countBlocksOnSheet';
 
 
 import { makepuzzle, solvepuzzle } from "sudoku";
 
-import getSudokuArray from '../hooks/getSudokuArray';
+import getSudokuArray from '../../functions/getSudokuArray';
 
 const SettingsPanel = () => {
   const store = useSelector(state => state);
@@ -36,16 +37,21 @@ const SettingsPanel = () => {
 
   const createSudokuArray = () => {
     let array = [];
-    let count = store.generatorSettings.blocksOnSheet * store.generatorSettings.numberOfSheet;
+    // let count = store.generatorSettings.blocksOnSheet * store.generatorSettings.numberOfSheet;
+    let blocks = store.generatorSettings.blocksOnSheet;
+    let sheet = store.generatorSettings.numberOfSheet;
 
-    for (let i = 0; i < count; i++) {
-      array[i] = getSudokuArray();
+
+    for (let i = 0; i < sheet; i++) {
+      array[i] = [];
+      for (let z = 0; z < blocks; z++) {
+        array[i][z] = getSudokuArray();
+      }
     }
-
-    console.log(array);
 
     return array;
   };
+
 
   return (
     <Box m={3} p={3} className="no-print">
@@ -69,14 +75,16 @@ const SettingsPanel = () => {
       <Typography gutterBottom>
         Количество блоков на странице
       </Typography>
+
       <Slider
+        className="slider"
         value={store.generatorSettings.blocksOnSheet}
         onChange={(e, value) => dispatch(blocksOnSheet(value))}
         valueLabelDisplay="auto"
-        step={1}
-        marks
-        min={1}
-        max={9}
+        step={null}
+        marks={store.generatorSettings.countBlocksOnSheet}
+        min={store.generatorSettings.countBlocksOnSheet[0].value}
+        max={store.generatorSettings.countBlocksOnSheet[store.generatorSettings.countBlocksOnSheet.length - 1].value}
       />
 
 

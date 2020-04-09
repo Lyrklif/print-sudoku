@@ -1,0 +1,24 @@
+/* Настройки печати */
+@media print {
+
+  .no-print {
+    display: none !important;
+  }
+
+  .preview {
+    display: grid !important;
+    // width: 100%;
+    // height: 100%;
+
+    width: 21cm;
+    height: 29.7cm;
+
+    max-width: 21cm;
+    max-height: 29.7cm;
+
+  }
+}
+
+@page {
+  size: A4;
+}
