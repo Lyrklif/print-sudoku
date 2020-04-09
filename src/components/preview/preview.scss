@@ -1,5 +1,12 @@
 .preview-wp {
   margin: 40px 25px;
+
+  width: 210px * 4;
+  height: 297px * 4;
+
+  overflow: auto;
+
+  border: 1px solid green;
 }
 
 .preview {
@@ -13,13 +20,7 @@
 
   page-break-after: always;
 
-
-  width: 210px * 4;
-  height: 297px * 4;
-
   margin-bottom: 30px !important;
-
-
 
   &-1 {
     @include grid-columns(6);
