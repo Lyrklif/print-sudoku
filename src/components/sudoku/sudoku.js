@@ -10,10 +10,10 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import TextField from '@material-ui/core/TextField';
 
-import fluids from '../actions/fluids/fluids';
-import level from '../actions/generatorSettings/level';
-import blocksOnSheet from '../actions/generatorSettings/blocksOnSheet';
-import numberOfSheet from '../actions/generatorSettings/numberOfSheet';
+import fluids from '../../actions/fluids/fluids';
+import level from '../../actions/generatorSettings/level';
+import blocksOnSheet from '../../actions/generatorSettings/blocksOnSheet';
+import numberOfSheet from '../../actions/generatorSettings/numberOfSheet';
 
 
 
@@ -34,7 +34,9 @@ const Sudoku = (props) => {
 
   return (
     <Box className="sudoku">
-      {array}
+      <div className="sudoku__content">
+        {array}
+      </div>
     </Box>
   )
 };

@@ -1,0 +1,140 @@
+.preview-wp {
+  margin: 40px 25px;
+
+  width: 210px * 4;
+  height: 297px * 4;
+
+  overflow: auto;
+
+  border: 1px solid green;
+}
+
+.preview {
+  @include make-grid();
+  margin: 0 !important;
+
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+
+  page-break-after: always;
+
+  margin-bottom: 30px !important;
+
+  &-1 {
+    @include grid-columns(6);
+    @include grid-rows(1);
+
+    &>.sudoku {
+      grid-column-start: 2;
+      grid-column-end: 6;
+    }
+  }
+
+  &-2 {
+    @include grid-columns(4);
+    @include grid-rows(2);
+    @include grid-gap(1, 1);
+
+    &>.sudoku {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+
+  &-4 {
+    @include grid-columns(2);
+    @include grid-rows(6);
+    @include grid-gap(1, 4);
+
+    &>.sudoku {
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
+    }
+  }
+
+  &-6 {
+    @include grid-columns(8);
+    @include grid-rows(24);
+    @include grid-gap(1, 4);
+
+    &>.sudoku {
+
+      &:nth-of-type(1),
+      &:nth-of-type(3),
+      &:nth-of-type(5) {
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(4),
+      &:nth-of-type(6) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+      }
+
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        grid-row-start: 1;
+        grid-row-end: 9;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        grid-row-start: 9;
+        grid-row-end: 17;
+      }
+
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        grid-row-start: 17;
+        grid-row-end: 25;
+      }
+    }
+  }
+
+  &-8 {
+    @include grid-columns(6);
+    @include grid-rows(4);
+    @include grid-gap(2, 3);
+
+    &>.sudoku {
+
+      &:nth-of-type(1),
+      &:nth-of-type(3),
+      &:nth-of-type(5),
+      &:nth-of-type(7) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(4),
+      &:nth-of-type(6),
+      &:nth-of-type(8) {
+        grid-column-start: 4;
+        grid-column-end: 6;
+      }
+    }
+
+  }
+
+  &-9 {
+    @include grid-columns(3);
+    @include grid-rows(3);
+    @include grid-gap(1, 4);
+  }
+}
