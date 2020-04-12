@@ -67,7 +67,8 @@ const SettingsPanel = () => {
           <MenuItem value={0}>Легко</MenuItem>
           <MenuItem value={1}>Нормально</MenuItem>
           <MenuItem value={3}>Сложно</MenuItem>
-          <MenuItem value={4}>Хардкор</MenuItem>
+          <MenuItem value={4}>Очень сложно</MenuItem>
+          <MenuItem value={5}>Хардкор</MenuItem>
         </Select>
       </FormControl>
 
