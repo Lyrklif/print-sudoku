@@ -1,0 +1,41 @@
+.block-count {}
+
+.block-count__list {
+  display: flex;
+
+  border: 1px solid $color-main;
+  border-radius: 0.3em;
+}
+
+.block-count__item {
+width: 100%;
+
+&:last-of-type {
+  .block-count__btn {
+    border-right: none;
+  }
+}
+}
+
+.block-count__btn {
+  border-right: 1px solid $color-main;
+  padding: 0.5em 0.8em;
+  font-size: 1em;
+  line-height: 1em;
+
+  width: 100%;
+
+  transition: background-color $ease;
+
+  &:hover, &:focus {
+    background-color: rgba($color-light-faded, 0.1);    
+  }
+
+  &.active {
+    background-color: rgba($color-light-faded, 0.3);
+  }
+
+  &:after {
+
+  }
+}

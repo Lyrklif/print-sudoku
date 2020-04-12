@@ -5,4 +5,56 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+
+* {
+  outline: $color-main;
+  box-sizing: border-box;
+
+  &::before,
+  *::after {
+    outline: $color-main;
+    box-sizing: border-box;
+  }
+}
+
+
+ul,
+ol {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+button {
+  background: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 1em 1.5em;
+  border-radius: 0.3em;
+  border: 1px solid $color-main;
+
+  text-transform: uppercase;
+
+  background-color: $color-dark-faded;
+  color: $white;
+
+  transition: background-color $ease;
+
+  &:hover,
+  :focus,
+  &:active {
+    background-color: $color-dark;
+  }
+
+  display: block;
 }

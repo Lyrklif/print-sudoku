@@ -1,0 +1,14 @@
+.sheet-count {}
+
+.sheet-count__input {
+  border: none;
+  border: 1px solid $color-dark-faded;
+
+  border-radius: 0.3em;
+  box-shadow: none;
+
+  height: 3em;
+  width: 100%;
+  max-width: 20em;
+  padding: 0 1em;
+}

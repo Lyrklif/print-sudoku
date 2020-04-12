@@ -1,24 +1,29 @@
 // Уровни игры
 
-export const levels = {
-  easy: {
+export default [
+  {
+    name: 'easy',
     title: 'Легко',
     hiddenNumbers: 40,
   },
-  normally: {
+  {
+    name: 'normally',
     title: 'Нормально',
     hiddenNumbers: 48,
   },
-  difficult: {
+  {
+    name: 'difficult',
     title: 'Сложно',
     hiddenNumbers: 53,
   },
-  veryDifficult: {
+  {
+    name: 'veryDifficult',
     title: 'Очень сложно',
     hiddenNumbers: 58,
   },
-  hardcore: {
+  {
+    name: 'hardcore',
     title: 'Хардкор',
     hiddenNumbers: 65,
   },
-};
+];
