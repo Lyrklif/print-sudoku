@@ -10,6 +10,8 @@ import SheetCount from '../sheet-count/sheet-count';
 
 import getSudokuArray from '../../functions/getSudokuArray';
 
+import Area from '../area/area';
+
 const SettingsPanel = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
@@ -40,15 +42,18 @@ const SettingsPanel = () => {
 
 
   return (
-    <div className="no-print">
+    <section className="settings-panel-wp no-print">
+      <div className="settings-panel">
+        <SelectLevel />
+        <SelectBlockCount />
+        <SheetCount />
 
-      <SelectLevel />
-      <SelectBlockCount />
-      <SheetCount />
+        <button className="btn" onClick={setSudokuArray}>Создать судоку</button>
+      </div>
 
-      <button className="btn" onClick={setSudokuArray}>Создать судоку</button>
+      <Area />
 
-    </div>
+    </section>
   )
 };
 

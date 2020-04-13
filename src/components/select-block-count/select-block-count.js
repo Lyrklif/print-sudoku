@@ -16,7 +16,7 @@ const SelectBlockCount = () => {
 
   return (
     <div className="block-count">
-      <span>К-во блоков на странице</span>
+      <span className="fluid-name">К-во блоков на странице</span>
       <ul className="block-count__list">
         {store.generatorSettings.countBlocksOnSheet.map((elem, i) => {
           return (

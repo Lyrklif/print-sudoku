@@ -2,13 +2,16 @@
 
 .sheet-count__input {
   border: none;
-  border: 1px solid $color-dark-faded;
+  border: 1px solid $color-main;
 
   border-radius: 0.3em;
   box-shadow: none;
 
   height: 3em;
   width: 100%;
-  max-width: 20em;
+  max-width: 100%;
   padding: 0 1em;
+
+  color: inherit;
+  background-color: rgba($color-light-faded, 0.3);
 }

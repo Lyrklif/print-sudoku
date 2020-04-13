@@ -14,15 +14,19 @@ const SelectLevel = () => {
   };
 
   return (
-    <div className="select">
-      <span>Уровень сложности</span>
-      <select className="select__content" value={store.level} onChange={handleChange}>
-        {levels.map((elem, i) => {
-          return (
-            <option key={i} value={i}>{elem.title}</option>
-          );
-        })}
-      </select>
+    <div className="select-wp">
+      <span className="fluid-name">Уровень сложности</span>
+      <div className="select">
+
+        <select className="select__content" value={store.level} onChange={handleChange}>
+          {levels.map((elem, i) => {
+            return (
+              <option key={i} value={i}>{elem.title}</option>
+            );
+          })}
+        </select>
+
+      </div>
     </div>
   )
 };

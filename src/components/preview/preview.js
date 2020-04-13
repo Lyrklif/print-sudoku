@@ -8,22 +8,21 @@ const Preview = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="preview-wp">
-    <div className="preview-content">
+    <section className="preview-wp">
+      <div className="preview-content">
 
-      {store.fluids.map((block, index) => {
-        return (
-          <div className={`preview preview-${store.generatorSettings.blocksOnSheet}`}>
-            {store.fluids[index].map((el, i) => {
-              return <Sudoku key={i} array={el} />
-            })}
-          </div>
-        )
-      })}
+        {store.fluids.map((block, index) => {
+          return (
+            <div className={`preview preview-${store.generatorSettings.blocksOnSheet}`}>
+              {store.fluids[index].map((el, i) => {
+                return <Sudoku key={i} array={el} />
+              })}
+            </div>
+          )
+        })}
 
-
-    </div>
-    </div>
+      </div>
+    </section>
   )
 };
 

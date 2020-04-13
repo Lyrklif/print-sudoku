@@ -13,7 +13,7 @@ const SheetCount = () => {
 
   return (
     <label className="sheet-count">
-      <span>К-во листов</span>
+      <span className="fluid-name">К-во листов</span>
       <input
         className="sheet-count__input"
         defaultValue={store.generatorSettings.numberOfSheet}
