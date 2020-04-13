@@ -1,20 +1,21 @@
 .block-count {}
 
 .block-count__list {
+  margin: 0;
   display: flex;
 
   border: 1px solid $color-main;
-  border-radius: 0.3em;
+  border-radius: $border-radius;
 }
 
 .block-count__item {
-width: 100%;
+  width: 100%;
 
-&:last-of-type {
-  .block-count__btn {
-    border-right: none;
+  &:last-of-type {
+    .block-count__btn {
+      border-right: none;
+    }
   }
-}
 }
 
 .block-count__btn {
@@ -24,12 +25,13 @@ width: 100%;
   line-height: 1em;
 
   width: 100%;
-  height: 2.8em;
+  height: $control-height - 0.1em;
 
   transition: background-color $ease;
 
-  &:hover, &:focus {
-    background-color: rgba($color-light-faded, 0.1);    
+  &:hover,
+  &:focus {
+    background-color: rgba($color-light-faded, 0.1);
   }
 
   &.active {

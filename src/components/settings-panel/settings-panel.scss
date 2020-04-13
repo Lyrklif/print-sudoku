@@ -18,7 +18,7 @@
   @media screen and (min-width: $md) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2em 1em;
+    grid-gap: 1em;
   }
 
   color: $white;
@@ -26,9 +26,6 @@
 }
 
 
-
-// ***********************
-// ***********************
-// ***********************
-// ***********************
-// ***********************
+.settings-panel__create {
+  grid-column: 2/3;  
+}

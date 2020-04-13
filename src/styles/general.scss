@@ -42,21 +42,35 @@ button {
 
 .btn {
   padding: 1em 1.5em;
-  border-radius: 0.3em;
+  border-radius: $border-radius;
 
-  background-color: $color-light;
+  border: 1px solid $color-light;
 
   transition: background-color $ease;
+  margin-top: 1.5em;
+  width: 100%;
+  display: block;
+
+}
+
+.btn-primary {
+  background-color: $color-light;
 
   &:hover,
-  :focus,
+  &:focus,
   &:active {
-    background-color: $color-light-faded;
+    background-color: $bg;
   }
+}
 
-  display: block;
-  grid-column: 2/3;
-  margin-top: 1.5em;
+.btn-secondary {
+  background-color: $bg;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-light;
+  }
 }
 
 

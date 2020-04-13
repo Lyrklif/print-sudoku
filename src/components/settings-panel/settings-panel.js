@@ -40,6 +40,10 @@ const SettingsPanel = () => {
     return array;
   };
 
+  const print = () => {
+    window.print();
+  };
+
 
   return (
     <section className="settings-panel-wp no-print">
@@ -48,7 +52,8 @@ const SettingsPanel = () => {
         <SelectBlockCount />
         <SheetCount />
 
-        <button className="btn" onClick={setSudokuArray}>Создать судоку</button>
+        <button className="btn btn-primary settings-panel__create" onClick={setSudokuArray}>Создать судоку</button>
+        <button className="btn btn-secondary" onClick={print}>Распечатать</button>
       </div>
 
       <Area />
