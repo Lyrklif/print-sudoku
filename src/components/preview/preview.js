@@ -8,7 +8,7 @@ const Preview = () => {
   const dispatch = useDispatch();
 
   return (
-    <section className="preview-wp">
+    <section className="preview-wp container">
       <div className="preview-content">
 
         {store.fluids.map((block, index) => {

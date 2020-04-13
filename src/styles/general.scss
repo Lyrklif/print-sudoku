@@ -31,6 +31,19 @@ ol {
   }
 }
 
+
+.container {
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+
+  @media screen and (min-width: $xl) {
+    width: 1000px;
+
+  }
+}
+
+
 button {
   background: none;
   box-shadow: none;

@@ -47,7 +47,7 @@ const SettingsPanel = () => {
 
   return (
     <section className="settings-panel-wp no-print">
-      <div className="settings-panel">
+      <div className="settings-panel container">
         <SelectLevel />
         <SelectBlockCount />
         <SheetCount />
