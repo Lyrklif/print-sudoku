@@ -1,14 +1,20 @@
+@import 'normalize';
 
-@import 'general.scss';
-@import 'print.scss';
+@import 'vars';
+@import 'general';
+@import 'print';
 
 // mixins
-@import 'mixins/grid.scss';
+@import 'mixins/grid';
 
 // components
-@import '../components/preview/preview.scss';
-@import '../components/sudoku/sudoku.scss';
-@import '../components/settings-panel/settings-panel.scss';
+@import '../components/preview/preview';
+@import '../components/sudoku/sudoku';
+@import '../components/settings-panel/settings-panel';
+@import '../components/select-block-count/select-block-count';
+@import '../components/select-level/select-level';
+@import '../components/sheet-count/sheet-count';
+@import '../components/area/area';
 
 
 

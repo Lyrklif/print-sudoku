@@ -1,26 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Box from '@material-ui/core/Box';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Slider from '@material-ui/core/Slider';
-import TextField from '@material-ui/core/TextField';
-
 import fluids from '../../actions/fluids/fluids';
-import level from '../../actions/generatorSettings/level';
-import blocksOnSheet from '../../actions/generatorSettings/blocksOnSheet';
 import numberOfSheet from '../../actions/generatorSettings/numberOfSheet';
-import countBlocksOnSheet from '../../actions/generatorSettings/countBlocksOnSheet';
 
-
-import { makepuzzle, solvepuzzle } from "sudoku";
+import SelectLevel from '../select-level/select-level';
+import SelectBlockCount from '../select-block-count/select-block-count';
+import SheetCount from '../sheet-count/sheet-count';
 
 import getSudokuArray from '../../functions/getSudokuArray';
+
+import Area from '../area/area';
 
 const SettingsPanel = () => {
   const store = useSelector(state => state);
@@ -37,10 +27,8 @@ const SettingsPanel = () => {
 
   const createSudokuArray = () => {
     let array = [];
-    // let count = store.generatorSettings.blocksOnSheet * store.generatorSettings.numberOfSheet;
     let blocks = store.generatorSettings.blocksOnSheet;
     let sheet = store.generatorSettings.numberOfSheet;
-
 
     for (let i = 0; i < sheet; i++) {
       array[i] = [];
@@ -52,56 +40,25 @@ const SettingsPanel = () => {
     return array;
   };
 
+  const print = () => {
+    window.print();
+  };
+
 
   return (
-    <Box m={3} p={3} className="no-print">
+    <section className="settings-panel-wp no-print">
+      <div className="settings-panel container">
+        <SelectLevel />
+        <SelectBlockCount />
+        <SheetCount />
 
-      <FormControl variant="outlined">
-        <InputLabel>
-          Уровень сложности
-        </InputLabel>
-        <Select
-          value={store.generatorSettings.level}
-          onChange={e => dispatch(level(e.target.value))}
-        >
-          <MenuItem value={0}>Легко</MenuItem>
-          <MenuItem value={1}>Нормально</MenuItem>
-          <MenuItem value={3}>Сложно</MenuItem>
-          <MenuItem value={4}>Хардкор</MenuItem>
-        </Select>
-      </FormControl>
+        <button className="btn btn-primary settings-panel__create" onClick={setSudokuArray}>Создать судоку</button>
+        <button className="btn btn-secondary" onClick={print}>Распечатать</button>
+      </div>
 
+      <Area />
 
-      <Typography gutterBottom>
-        Количество блоков на странице
-      </Typography>
-
-      <Slider
-        className="slider"
-        value={store.generatorSettings.blocksOnSheet}
-        onChange={(e, value) => dispatch(blocksOnSheet(value))}
-        valueLabelDisplay="auto"
-        step={null}
-        marks={store.generatorSettings.countBlocksOnSheet}
-        min={store.generatorSettings.countBlocksOnSheet[0].value}
-        max={store.generatorSettings.countBlocksOnSheet[store.generatorSettings.countBlocksOnSheet.length - 1].value}
-      />
-
-
-      <TextField
-        label="Количество листов"
-        variant="outlined"
-        type={'number'}
-        value={store.generatorSettings.numberOfSheet}
-        onChange={changeNumberOfSheet}
-      />
-
-
-      <Button variant="contained" color="primary" onClick={setSudokuArray}>
-        Создать судоку
-      </Button>
-
-    </Box>
+    </section>
   )
 };
 

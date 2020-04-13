@@ -1,0 +1,17 @@
+.sheet-count {}
+
+.sheet-count__input {
+  border: none;
+  border: 1px solid $color-main;
+
+  border-radius: $border-radius;
+  box-shadow: none;
+
+  height: $control-height;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1em;
+
+  color: inherit;
+  background-color: rgba($color-light-faded, 0.3);
+}

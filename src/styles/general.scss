@@ -5,4 +5,91 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+
+* {
+  outline: $color-main;
+  box-sizing: border-box;
+
+  &::before,
+  *::after {
+    outline: $color-main;
+    box-sizing: border-box;
+  }
+}
+
+
+ul,
+ol {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+
+.container {
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+
+  @media screen and (min-width: $xl) {
+    width: 1000px;
+
+  }
+}
+
+
+button {
+  background: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 1em 1.5em;
+  border-radius: $border-radius;
+
+  border: 1px solid $color-light;
+
+  transition: background-color $ease;
+  margin-top: 1.5em;
+  width: 100%;
+  display: block;
+
+}
+
+.btn-primary {
+  background-color: $color-light;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $bg;
+  }
+}
+
+.btn-secondary {
+  background-color: $bg;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-light;
+  }
+}
+
+
+.fluid-name {
+  display: block;
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }

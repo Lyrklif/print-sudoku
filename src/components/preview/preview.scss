@@ -1,12 +1,15 @@
 .preview-wp {
+  overflow-x: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  margin-bottom: 60px;
+}
+
+.preview-content {
   margin: 40px 25px;
 
   width: 210px * 4;
   height: 297px * 4;
-
-  overflow: auto;
-
-  border: 1px solid green;
 }
 
 .preview {

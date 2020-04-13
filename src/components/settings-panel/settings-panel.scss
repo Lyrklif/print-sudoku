@@ -1,3 +1,25 @@
-.slider {
-  
+.settings-panel-wp {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.settings-panel {
+  padding: 26px 16px;
+  color: $white;
+
+  @media screen and (min-width: $sm) {
+    padding: 50px 30px;
+  }
+
+  @media screen and (min-width: $md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+
+.settings-panel__create {
+  grid-column: 2/3;
 }
