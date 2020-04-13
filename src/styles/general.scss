@@ -35,7 +35,8 @@ ol {
 .container {
   width: 100%;
   max-width: 90vw;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width: $xl) {
     width: 1000px;
@@ -70,7 +71,6 @@ button {
   background-color: $color-light;
 
   &:hover,
-  &:focus,
   &:active {
     background-color: $bg;
   }
@@ -80,7 +80,6 @@ button {
   background-color: $bg;
 
   &:hover,
-  &:focus,
   &:active {
     background-color: $color-light;
   }

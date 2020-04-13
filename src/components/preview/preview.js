@@ -11,6 +11,10 @@ const Preview = () => {
     <section className="preview-wp container">
       <div className="preview-content">
 
+        {store.fluids.length === 0 && 
+        <p>Здесь будут отображены сгенерированные судоку</p>
+        }
+
         {store.fluids.map((block, index) => {
           return (
             <div className={`preview preview-${store.generatorSettings.blocksOnSheet}`}>
