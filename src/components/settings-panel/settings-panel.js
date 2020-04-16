@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import fluids from '../../actions/fluids/fluids';
@@ -29,6 +29,8 @@ const SettingsPanel = () => {
 
   const setSudokuArray = () => {
     dispatch(fluids(createSudokuArray()));
+
+    // print();
   };
 
   const createSudokuArray = () => {
