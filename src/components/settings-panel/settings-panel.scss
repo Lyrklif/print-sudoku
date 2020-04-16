@@ -1,7 +1,13 @@
 .settings-panel-wp {
   overflow: hidden;
   position: relative;
-  margin-bottom: 30px;
+
+  min-height: 100vh;
+  min-width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .settings-panel {
@@ -13,9 +19,12 @@
   }
 
   @media screen and (min-width: $md) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-gap: 1em;
+
+    display: flex;
+    flex-direction: column;
   }
 }
 
