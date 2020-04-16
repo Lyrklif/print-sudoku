@@ -13,7 +13,7 @@ const Preview = () => {
 
         {store.fluids.map((block, index) => {
           return (
-            <div className={`preview preview-${store.generatorSettings.blocksOnSheet}`}>
+            <div className={`preview preview-${store.settings.blocksOnSheet}`}>
               {store.fluids[index].map((el, i) => {
                 return <Sudoku key={i} array={el} />
               })}

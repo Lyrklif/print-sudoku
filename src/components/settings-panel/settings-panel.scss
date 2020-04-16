@@ -11,18 +11,11 @@
 }
 
 .settings-panel {
-  padding: 26px 16px;
+  padding: 50px 16px;
   color: $white;
 
-  @media screen and (min-width: $sm) {
-    padding: 50px 30px;
-  }
 
   @media screen and (min-width: $md) {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-gap: 1em;
-
     display: flex;
     flex-direction: column;
   }

@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
 import fluids from "./fluids/index";
-import generatorSettings from "./generatorSettings/index";
+import settings from "./settings/index";
 
 export default combineReducers({
     fluids,
-    generatorSettings
+    settings
 })
