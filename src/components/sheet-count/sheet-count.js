@@ -15,7 +15,7 @@ const SheetCount = () => {
 
   return (
     <label className="sheet-count">
-      <span className="fluid-name">К-во листов</span>
+      <span className="fluid-name">К-во страниц</span>
       <input
         className="sheet-count__input"
         defaultValue={store.settings.numberOfSheet}
