@@ -1,4 +1,4 @@
-import { COUNT_BLOCKS_ON_SHEET } from "../../constants/actionTypes";
+import { COUNT_BLOCKS_ON_SHEET } from "../../../constants/actionTypes";
 
 export default (value) => {
   return {

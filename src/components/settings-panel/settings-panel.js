@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import fluids from '../../actions/fluids/fluids';
-import numberOfSheet from '../../actions/settings/numberOfSheet';
+import fluids from '../../store/actions/fluids/fluids';
+import numberOfSheet from '../../store/actions/settings/numberOfSheet';
 
 import SelectLevel from '../select-level/select-level';
 import SelectBlockCount from '../select-block-count/select-block-count';
@@ -23,9 +23,6 @@ const SettingsPanel = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
   const length = levels[store.settings.level].hiddenNumbers;
-
-  // const [randomArray, changeArray] = useNumbersArray(length, 0, 80);
-
 
   const setSudokuArray = () => {
     dispatch(fluids(createSudokuArray()));

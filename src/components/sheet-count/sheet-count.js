@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import numberOfSheet from '../../actions/settings/numberOfSheet';
+import numberOfSheet from '../../store/actions/settings/numberOfSheet';
 
 const SheetCount = () => {
   const store = useSelector(state => state);

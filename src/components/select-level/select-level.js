@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import level from '../../actions/settings/level';
+import level from '../../store/actions/settings/level';
 import levels from '../../constants/levels';
 
 
