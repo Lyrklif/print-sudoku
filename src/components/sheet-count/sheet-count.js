@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import numberOfSheet from '../../actions/generatorSettings/numberOfSheet';
+import numberOfSheet from '../../actions/settings/numberOfSheet';
 
 const SheetCount = () => {
   const store = useSelector(state => state);
@@ -16,7 +16,7 @@ const SheetCount = () => {
       <span className="fluid-name">К-во листов</span>
       <input
         className="sheet-count__input"
-        defaultValue={store.generatorSettings.numberOfSheet}
+        defaultValue={store.settings.numberOfSheet}
         type="number"
         min="1"
         max="100"
