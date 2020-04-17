@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import {useSelector, useDispatch} from 'react-redux';
 
-import fluids from "./actions/fluids/fluids";
+import fluids from "./store/actions/fluids/fluids";
 
 import SettingsPanel from './components/settings-panel/settings-panel';
 import Preview from './components/preview/preview';

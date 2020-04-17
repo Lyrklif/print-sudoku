@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Sudoku from '../sudoku/sudoku';
 
+// блок, внутри которого отображаются сгенерированные судоку
+// содержимое этого блока выводится на печать
 const Preview = () => {
   const store = useSelector(state => state);
-  const dispatch = useDispatch();
 
   return (
     <section className="preview-wp container">

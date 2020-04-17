@@ -1,5 +1,5 @@
 
-import { FLUIDS } from "../../constants/actionTypes";
+import { FLUIDS } from "../../../constants/actionTypes";
 
 export default (array) => {
   return {
