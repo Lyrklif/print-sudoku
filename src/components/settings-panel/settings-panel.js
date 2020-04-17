@@ -9,7 +9,6 @@ import SheetCount from '../sheet-count/sheet-count';
 
 import getSudokuArray from '../../functions/getSudokuArray';
 
-import Area from '../area/area';
 import levels from '../../constants/levels';
 
 import getUniqueNumbersArray from '../../functions/getUniqueNumbersArray';
@@ -54,19 +53,16 @@ const SettingsPanel = () => {
 
 
   return (
-    <section className="settings-panel-wp no-print">
-      <div className="settings-panel container">
-        <h1>Судоку</h1>
+    <section className="settings-panel no-print">
 
-        <SelectLevel />
-        <SelectBlockCount />
-        <SheetCount />
+      <h1>Судоку</h1>
 
-        <button className="btn btn-primary settings-panel__create" onClick={setSudokuArray}>Создать судоку</button>
-        <button className="btn btn-secondary" onClick={print}>Распечатать</button>
-      </div>
+      <SelectLevel />
+      <SelectBlockCount />
+      <SheetCount />
 
-      <Area />
+      <button className="btn btn-primary settings-panel__create" onClick={setSudokuArray}>Создать судоку</button>
+      <button className="btn btn-secondary" onClick={print}>Распечатать</button>
 
     </section>
   )

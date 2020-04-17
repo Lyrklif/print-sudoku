@@ -1,18 +1,8 @@
 .preview-wp {
-  overflow-x: auto;
-  max-width: 100%;
-  max-height: 100vh;
-  margin-top: 60px;
-  margin-bottom: 60px;
-
   display: none;
 }
 
 .preview-content {
-  margin: 0 auto;
-
-  width: 210px * 4;
-  height: 297px * 4;
   text-align: center;
 }
 
@@ -27,7 +17,7 @@
 
   page-break-after: always;
 
-  margin-bottom: 30px !important;
+  // margin-bottom: 30px !important;
 
   &-1 {
     @include grid-columns(6);
@@ -113,31 +103,30 @@
     }
   }
 
-  &-8 {
-    @include grid-columns(6);
-    @include grid-rows(4);
-    @include grid-gap(2, 3);
+  // &-8 {
+  //   @include grid-columns(6);
+  //   @include grid-rows(4);
+  //   @include grid-gap(2, 3);
 
-    &>.sudoku {
+  //   &>.sudoku {
 
-      &:nth-of-type(1),
-      &:nth-of-type(3),
-      &:nth-of-type(5),
-      &:nth-of-type(7) {
-        grid-column-start: 2;
-        grid-column-end: 4;
-      }
+  //     &:nth-of-type(1),
+  //     &:nth-of-type(3),
+  //     &:nth-of-type(5),
+  //     &:nth-of-type(7) {
+  //       grid-column-start: 2;
+  //       grid-column-end: 4;
+  //     }
 
-      &:nth-of-type(2),
-      &:nth-of-type(4),
-      &:nth-of-type(6),
-      &:nth-of-type(8) {
-        grid-column-start: 4;
-        grid-column-end: 6;
-      }
-    }
-
-  }
+  //     &:nth-of-type(2),
+  //     &:nth-of-type(4),
+  //     &:nth-of-type(6),
+  //     &:nth-of-type(8) {
+  //       grid-column-start: 4;
+  //       grid-column-end: 6;
+  //     }
+  //   }
+  // }
 
   &-9 {
     @include grid-columns(3);

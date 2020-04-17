@@ -1,6 +1,10 @@
 /* Настройки печати */
 @media print {
 
+  .root {
+    display: block !important;
+  }
+
   .no-print {
     display: none !important;
   }
@@ -9,6 +13,9 @@
     overflow: visible !important;
     border: none !important;
     display: block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
   }
 
   .preview-content {
@@ -18,18 +25,16 @@
 
   .preview {
     display: grid !important;
-    // width: 100%;
-    // height: 100%;
 
-    width: 21cm;
-    height: 29.7cm;
+    width: 21cm !important;
+    height: 29.7cm !important;
 
-    max-width: 21cm;
-    max-height: 29.7cm;
+    max-width: 21cm !important;
+    max-height: 29.7cm !important;
 
   }
 }
 
 @page {
-  size: A4;
+  size: A4 !important;
 }
