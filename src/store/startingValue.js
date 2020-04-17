@@ -8,7 +8,7 @@ export default {
     level: 1,
     blocksOnSheet: 6,
     numberOfSheet: 2,
-    countBlocksOnSheet: [1, 2, 4, 6, 8, 9],
+    countBlocksOnSheet: [1, 2, 4, 6, 9],
   }
 };
 

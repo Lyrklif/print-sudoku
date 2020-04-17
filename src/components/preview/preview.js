@@ -9,7 +9,7 @@ const Preview = () => {
   const store = useSelector(state => state);
 
   return (
-    <section className="preview-wp container">
+    <section className="preview-wp">
       <div className="preview-content">
 
         {store.fluids.map((block, index) => {

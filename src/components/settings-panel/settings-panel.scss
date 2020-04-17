@@ -1,27 +1,17 @@
-.settings-panel-wp {
-  overflow: hidden;
-  position: relative;
 
-  min-height: 100vh;
-  min-width: 100vw;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .settings-panel {
-  padding: 50px 16px;
+  padding: 60px 0;
   color: $white;
 
 
+  width: 90vw;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
   @media screen and (min-width: $md) {
-    display: flex;
-    flex-direction: column;
+    width: 500px;
   }
 }
 
-
-.settings-panel__create {
-  grid-column: 2/3;
-}

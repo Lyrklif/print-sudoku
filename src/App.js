@@ -2,10 +2,10 @@ import React, {useState} from "react";
 
 import {useSelector, useDispatch} from 'react-redux';
 
-import fluids from "./store/actions/fluids/fluids";
 
 import SettingsPanel from './components/settings-panel/settings-panel';
 import Preview from './components/preview/preview';
+import Area from './components/area/area';
 
 
 
@@ -18,6 +18,7 @@ const App = () => {
     <>
       <SettingsPanel />
       <Preview />
+      <Area />
     </>
   )
 };
