@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import fluids from '../../store/actions/fluids/fluids';
@@ -15,6 +15,7 @@ import getUniqueNumbersArray from '../../functions/getUniqueNumbersArray';
 import getClearedArrayByIndexes from '../../functions/getClearedArrayByIndexes';
 
 
+
 // панель настроек параметров судоку
 const SettingsPanel = () => {
   const store = useSelector(state => state);
@@ -25,7 +26,8 @@ const SettingsPanel = () => {
   const setSudokuArray = () => {
     dispatch(fluids(createSudokuArray()));
 
-    // print();
+   // print();
+
   };
 
   // создать массив судоку
