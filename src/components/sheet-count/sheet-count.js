@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import numberOfSheet from '../../store/actions/settings/numberOfSheet';
 
+// задать к-во страниц
 const SheetCount = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
 
+  // обработчик изменения input value (к-во стр.)
   const handleChange = (value) => {
     dispatch(numberOfSheet(value))
   };

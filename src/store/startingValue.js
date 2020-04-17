@@ -1,6 +1,8 @@
+
+// стартовые значения для store
+
 export default {
-  fluids: [
-  ],
+  fluids: [],
 
   settings: {
     level: 1,

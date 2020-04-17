@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import level from '../../store/actions/settings/level';
-import levels from '../../constants/levels';
 
 import blocksOnSheet from '../../store/actions/settings/blocksOnSheet';
 
+// задать к-во судоку на странице
 const SelectBlockCount = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
 
+  // при нажатии на кнопки с цифрами -> к-во судоку на странице
   const handleClick = (value) => {
     dispatch(blocksOnSheet(value))
   };

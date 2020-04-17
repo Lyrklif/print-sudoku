@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import level from '../../store/actions/settings/level';
 import levels from '../../constants/levels';
 
-
+// задать уровень сложности судоку
 const SelectLevel = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
 
+  // при изменении select option (уровни сложности)
   const handleChange = (e) => {
     dispatch(level(+e.target.value))
   };

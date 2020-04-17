@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import fluids from '../../store/actions/fluids/fluids';
-import numberOfSheet from '../../store/actions/settings/numberOfSheet';
 
 import SelectLevel from '../select-level/select-level';
 import SelectBlockCount from '../select-block-count/select-block-count';
@@ -13,23 +12,24 @@ import getSudokuArray from '../../functions/getSudokuArray';
 import Area from '../area/area';
 import levels from '../../constants/levels';
 
-import { useNumbersArray } from '../../hooks/useNumbersArray';
-
 import getUniqueNumbersArray from '../../functions/getUniqueNumbersArray';
 import getClearedArrayByIndexes from '../../functions/getClearedArrayByIndexes';
 
 
+// панель настроек параметров судоку
 const SettingsPanel = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
   const length = levels[store.settings.level].hiddenNumbers;
 
+  // записать массив судоку в store
   const setSudokuArray = () => {
     dispatch(fluids(createSudokuArray()));
 
     // print();
   };
 
+  // создать массив судоку
   const createSudokuArray = () => {
     let array = [];
     let blocks = store.settings.blocksOnSheet;
@@ -47,7 +47,7 @@ const SettingsPanel = () => {
     return array;
   };
 
-
+  // диалоговое окно для печати
   const print = () => {
     window.print();
   };

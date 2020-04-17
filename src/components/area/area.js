@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-
+// область с анимационными блоками (анимационный фон)
 const Area = () => {
   return (
     <div class="area" >

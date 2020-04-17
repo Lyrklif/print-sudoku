@@ -1,4 +1,5 @@
 
+// типы, используемые при записи в store
 
 export const FLUIDS = 'FLUIDS';
 
