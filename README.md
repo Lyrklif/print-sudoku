@@ -1,6 +1,6 @@
 
 # Cудоку  
-> https://lyrklif.github.io/print-sudoku/  
+https://lyrklif.github.io/print-sudoku/  
 ------  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
