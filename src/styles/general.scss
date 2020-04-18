@@ -21,6 +21,10 @@ body {
   justify-content: center;
 }
 
+.hide {
+  display: none;
+}
+
 
 * {
   outline: $color-main;
