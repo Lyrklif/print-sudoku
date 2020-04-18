@@ -94,18 +94,18 @@ button {
   background-color: $color-light;
 
   &:active {
-    background-color: $bg;
+    background-color: transparent;
   }
 
   @media screen and (min-width: $lg) {
     &:hover {
-      background-color: $bg;
+      background-color: transparent;
     }
   }
 }
 
 .btn-secondary {
-  background-color: $bg;
+  // background-color: $bg;
 
   &:active {
     background-color: $color-light;

@@ -1,25 +1,23 @@
-import React, { useState, useEffect } from 'react';
+
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import fluids from '../../store/actions/fluids/fluids';
-
-import SelectLevel from '../select-level/select-level';
-import SelectBlockCount from '../select-block-count/select-block-count';
-import SheetCount from '../sheet-count/sheet-count';
-
-import getSudokuArray from '../../functions/getSudokuArray';
 
 import levels from '../../constants/levels';
 
+import fluids from '../../store/actions/fluids/fluids';
+
+import getSudokuArray from '../../functions/getSudokuArray';
 import getUniqueNumbersArray from '../../functions/getUniqueNumbersArray';
 import getClearedArrayByIndexes from '../../functions/getClearedArrayByIndexes';
 
 
-// панель настроек параметров судоку
-const SettingsPanel = () => {
+
+// кнопки
+const Buttons = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
   const length = levels[store.settings.level].hiddenNumbers;
+
 
   // записать массив судоку в store
   const setSudokuArray = () => {
@@ -27,6 +25,7 @@ const SettingsPanel = () => {
 
     // print();
   };
+
 
   // создать массив судоку
   const createSudokuArray = () => {
@@ -46,6 +45,7 @@ const SettingsPanel = () => {
     return array;
   };
 
+
   // диалоговое окно для печати
   const print = () => {
     window.print();
@@ -53,20 +53,12 @@ const SettingsPanel = () => {
 
 
   return (
-    <section className="settings-panel no-print">
-
-      <h1>Судоку</h1>
-
-      <SelectLevel />
-      <SelectBlockCount />
-      <SheetCount />
-
-      <button className="btn btn-primary settings-panel__btn" onClick={setSudokuArray}>Создать судоку</button>
-      <button className="btn btn-secondary settings-panel__btn" onClick={print}>Распечатать</button>
-
-    </section>
+    <>
+      <button className="btn btn-primary panel__btn" onClick={setSudokuArray}>Создать судоку</button>
+      <button className="btn btn-secondary panel__btn" onClick={print}>Распечатать</button>
+    </>
   )
 };
 
-export default SettingsPanel;
+export default Buttons;
 
