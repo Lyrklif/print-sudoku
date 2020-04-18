@@ -15,7 +15,7 @@ const SelectBlockCount = () => {
   };
 
   return (
-    <div className="block-count">
+    <>
       <span className="fluid-name">К-во судоку на&nbsp;странице</span>
       <ul className="block-count__list">
         
@@ -31,7 +31,7 @@ const SelectBlockCount = () => {
         })}
         
       </ul>
-    </div>
+    </>
   )
 };
 

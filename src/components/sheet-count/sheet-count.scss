@@ -13,5 +13,30 @@
   padding: 0 1em;
 
   color: inherit;
-  background-color: rgba($color-light-faded, 0.3);
+  background-color: rgba($color-light-faded, .3);
+}
+
+.sheet-count__controls-group {
+  display: flex;
+  align-items: center;
+}
+
+.sheet-count__btn_minus,
+.sheet-count__btn_plus {
+  max-width: 5em;
+}
+
+.sheet-count__input {
+  border-radius: 0;
+  border-right: 0;
+  border-left: 0;
+  text-align: center;
+}
+
+.sheet-count__btn_minus {
+  border-radius: 3px 0 0 3px;
+}
+
+.sheet-count__btn_plus {
+  border-radius: 0 3px 3px 0;
 }

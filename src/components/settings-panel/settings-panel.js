@@ -61,8 +61,8 @@ const SettingsPanel = () => {
       <SelectBlockCount />
       <SheetCount />
 
-      <button className="btn btn-primary settings-panel__create" onClick={setSudokuArray}>Создать судоку</button>
-      <button className="btn btn-secondary" onClick={print}>Распечатать</button>
+      <button className="btn btn-primary settings-panel__btn" onClick={setSudokuArray}>Создать судоку</button>
+      <button className="btn btn-secondary settings-panel__btn" onClick={print}>Распечатать</button>
 
     </section>
   )

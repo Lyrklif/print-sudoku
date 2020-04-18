@@ -1,11 +1,13 @@
+
 @import 'normalize';
 
-@import 'vars';
-@import 'general';
-@import 'print';
+@import 'vars'; // переменные
+@import 'general'; // основные стили
+@import 'print'; // стили для печати
 
 // mixins
-@import 'mixins/grid';
+@import 'mixins/grid'; // сетка
+
 
 // components
 @import '../components/preview/preview';
