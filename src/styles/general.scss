@@ -21,6 +21,10 @@ body {
   justify-content: center;
 }
 
+.hide {
+  display: none;
+}
+
 
 * {
   outline: $color-main;
@@ -70,6 +74,16 @@ button {
   cursor: pointer;
   color: inherit;
   text-transform: uppercase;
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: transparent;
+  }
+  
+  &.loading {
+    cursor: wait;
+  }
 }
 
 .btn {
@@ -80,7 +94,7 @@ button {
 
   border: 1px solid $color-light;
 
-  transition: background-color $ease;
+  transition: background-color $ease, opacity $ease;
 
   width: 100%;
   display: block;
@@ -90,19 +104,18 @@ button {
   background-color: $color-light;
 
   &:active {
-    background-color: $bg;
+    background-color: transparent;
   }
 
   @media screen and (min-width: $lg) {
     &:hover {
-      background-color: $bg;
+      background-color: transparent;
     }
   }
+
 }
 
 .btn-secondary {
-  background-color: $bg;
-
   &:active {
     background-color: $color-light;
   }
@@ -112,6 +125,10 @@ button {
     &:hover {
       background-color: $color-light;
     }
+  }
+
+  &:disabled {
+    background-color: transparent;
   }
 
 }

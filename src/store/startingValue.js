@@ -3,12 +3,12 @@
 
 export default {
   fluids: [],
-
-  settings: {
+  
+  params: {
     level: 1,
-    blocksOnSheet: 6,
-    numberOfSheet: 2,
-    countBlocksOnSheet: [1, 2, 4, 6, 9],
+    sudokuCount: 6,
+    pages: 1,
+    sudokuCountOptions: [1, 2, 4, 6, 9],
   }
 };
 
