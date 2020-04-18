@@ -62,13 +62,18 @@
   &-6 {
     @include grid-columns(2);
     @include grid-rows(6);
-    @include grid-gap(3, 12);
+    @include grid-gap(1,8);
 
-    margin-top: 40px !important;
+    // margin-top: 50px !important;
+    
 
     .sudoku__content {
-      width: 95%;
-      height: 95%;
+      width: 90%;
+      height: 90%;
+    }
+
+    &>.sudoku {
+      margin-top: 30px;
     }
   }
 
