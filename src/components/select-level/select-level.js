@@ -15,7 +15,7 @@ const SelectLevel = () => {
   };
 
   return (
-    <div className="select-wp">
+    <>
       <span className="fluid-name">Уровень сложности</span>
       <div className="select">
         <select className="select__content" value={store.settings.level} onChange={handleChange}>
@@ -28,7 +28,7 @@ const SelectLevel = () => {
 
         </select>
       </div>
-    </div>
+    </>
   )
 };
 

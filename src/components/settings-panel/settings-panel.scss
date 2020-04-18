@@ -1,5 +1,3 @@
-
-
 .settings-panel {
   padding: 60px 0;
   color: $white;
@@ -9,9 +7,13 @@
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  
+
   @media screen and (min-width: $md) {
     width: 500px;
   }
 }
 
+
+.settings-panel__btn {
+  margin-top: 2em;
+}

@@ -33,6 +33,18 @@ body {
   }
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+
 h1 {
   text-align: center;
   opacity: 0.3;
@@ -61,34 +73,47 @@ button {
 }
 
 .btn {
-  padding: 1em 1.5em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  height: 3em;
   border-radius: $border-radius;
 
   border: 1px solid $color-light;
 
   transition: background-color $ease;
-  margin-top: 1.5em;
+
   width: 100%;
   display: block;
-
 }
 
 .btn-primary {
   background-color: $color-light;
 
-  &:hover,
   &:active {
     background-color: $bg;
+  }
+
+  @media screen and (min-width: $lg) {
+    &:hover {
+      background-color: $bg;
+    }
   }
 }
 
 .btn-secondary {
   background-color: $bg;
 
-  &:hover,
   &:active {
     background-color: $color-light;
   }
+
+  @media screen and (min-width: $lg) {
+
+    &:hover {
+      background-color: $color-light;
+    }
+  }
+
 }
 
 
