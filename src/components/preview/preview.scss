@@ -1,5 +1,5 @@
 .preview-wp {
-  // display: none;
+  display: none;
 }
 
 .preview-content {
@@ -11,13 +11,11 @@
   margin: 0 !important;
 
   align-items: center;
-  justify-content: center;
   align-content: center;
   justify-content: center;
 
   page-break-after: always;
 
-  // margin-bottom: 30px !important;
 
   &-1 {
     @include grid-columns(6);
@@ -62,44 +60,15 @@
   }
 
   &-6 {
-    @include grid-columns(8);
-    @include grid-rows(24);
-    @include grid-gap(1, 4.5);
+    @include grid-columns(2);
+    @include grid-rows(6);
+    @include grid-gap(3, 12);
 
-    &>.sudoku {
+    margin-top: 40px !important;
 
-      &:nth-of-type(1),
-      &:nth-of-type(3),
-      &:nth-of-type(5) {
-        grid-column-start: 2;
-        grid-column-end: 5;
-      }
-
-      &:nth-of-type(2),
-      &:nth-of-type(4),
-      &:nth-of-type(6) {
-        grid-column-start: 5;
-        grid-column-end: 8;
-      }
-
-
-      &:nth-of-type(1),
-      &:nth-of-type(2) {
-        grid-row-start: 1;
-        grid-row-end: 9;
-      }
-
-      &:nth-of-type(3),
-      &:nth-of-type(4) {
-        grid-row-start: 9;
-        grid-row-end: 17;
-      }
-
-      &:nth-of-type(5),
-      &:nth-of-type(6) {
-        grid-row-start: 17;
-        grid-row-end: 25;
-      }
+    .sudoku__content {
+      width: 95%;
+      height: 95%;
     }
   }
 
