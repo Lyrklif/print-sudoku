@@ -1,4 +1,4 @@
-.settings-panel {
+.panel {
   padding: 60px 0;
   color: $white;
 
@@ -11,9 +11,4 @@
   @media screen and (min-width: $md) {
     width: 500px;
   }
-}
-
-
-.settings-panel__btn {
-  margin-top: 2em;
 }

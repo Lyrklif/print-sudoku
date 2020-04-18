@@ -1,6 +1,6 @@
-.block-count {}
+.sudoku-count {}
 
-.block-count__list {
+.sudoku-count__list {
   margin: 0;
   display: flex;
 
@@ -8,17 +8,17 @@
   border-radius: $border-radius;
 }
 
-.block-count__item {
+.sudoku-count__item {
   width: 100%;
 
   &:last-of-type {
-    .block-count__btn {
+    .sudoku-count__btn {
       border-right: none;
     }
   }
 }
 
-.block-count__btn {
+.sudoku-count__btn {
   border-right: 1px solid $color-main;
   padding: 0.5em 0.8em;
   font-size: 1em;

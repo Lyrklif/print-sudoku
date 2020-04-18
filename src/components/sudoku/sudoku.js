@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+
 
 // судоку (отображение массива в виде квадрата 9х9) 
 const Sudoku = (props) => {
-  const store = useSelector(state => state);
-  const dispatch = useDispatch();
 
   // массив чисел, записанных в <div>
   const array = props.array.map((number, index) => {
