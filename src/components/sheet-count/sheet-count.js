@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import numberOfSheet from '../../store/actions/settings/numberOfSheet';
+import pages from '../../store/actions/params/pages';
+
 
 // задать к-во страниц
 const SheetCount = () => {
@@ -11,13 +12,13 @@ const SheetCount = () => {
 
   // обработчик изменения input value (к-во стр.)
   const handleChange = (value) => {
-    dispatch(numberOfSheet(value))
+    dispatch(pages(value))
   };
 
 
   // уменьшить значение на 1
   const minus = () => {
-    let value = store.settings.numberOfSheet - 1;
+    let value = store.params.pages - 1;
     value = value >= 1 ? value : 1;
 
     handleChange(value);
@@ -26,7 +27,7 @@ const SheetCount = () => {
 
   // увеличить значение на 1
   const plus = () => {
-    let value = store.settings.numberOfSheet + 1;
+    let value = store.params.pages + 1;
     value = value <= 100 ? value : 100;
 
     handleChange(value);
@@ -48,7 +49,7 @@ const SheetCount = () => {
         <input
           className="sheet-count__input"
           if="sheet"
-          value={store.settings.numberOfSheet}
+          value={store.params.pages}
           type="number"
           min="1"
           max="100"

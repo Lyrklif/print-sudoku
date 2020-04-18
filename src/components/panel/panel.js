@@ -1,6 +1,9 @@
 import React from 'react';
 
-import Params from '../params/params';
+import SelectLevel from '../select-level/select-level';
+import SudokuCount from '../sudoku-count/sudoku-count';
+import SheetCount from '../sheet-count/sheet-count';
+
 import Buttons from '../buttons/buttons';
 
 
@@ -11,7 +14,10 @@ const Panel = () => {
     <section className="panel no-print">
       <h1>Судоку</h1>
 
-      <Params />
+      <SelectLevel />
+      <SudokuCount />
+      <SheetCount />
+
       <Buttons />
 
     </section>

@@ -16,7 +16,7 @@ import getClearedArrayByIndexes from '../../functions/getClearedArrayByIndexes';
 const Buttons = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
-  const length = levels[store.settings.level].hiddenNumbers;
+  const length = levels[store.params.level].hiddenNumbers;
 
 
   // записать массив судоку в store
@@ -30,8 +30,8 @@ const Buttons = () => {
   // создать массив судоку
   const createSudokuArray = () => {
     let array = [];
-    let blocks = store.settings.blocksOnSheet;
-    let sheet = store.settings.numberOfSheet;
+    let blocks = store.params.sudokuCount;
+    let sheet = store.params.pages;
 
     for (let i = 0; i < sheet; ++i) {
       array[i] = [];
