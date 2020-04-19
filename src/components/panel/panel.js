@@ -12,7 +12,7 @@ const Panel = () => {
 
   return (
     <section className="panel no-print">
-      <h1>Судоку</h1>
+      <h1>Судоку для печати</h1>
 
       <SelectLevel />
       <SudokuCount />
