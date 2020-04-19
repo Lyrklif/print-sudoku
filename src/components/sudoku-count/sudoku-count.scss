@@ -1,5 +1,3 @@
-.sudoku-count {}
-
 .sudoku-count__list {
   margin: 0;
   display: flex;
@@ -19,7 +17,8 @@
 }
 
 .sudoku-count__btn {
-  border: none;
-  border-right: 1px solid $color-main;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
   border-radius: 0;
 }
