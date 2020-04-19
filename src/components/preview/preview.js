@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import Sudoku from '../sudoku/sudoku';
@@ -8,6 +8,21 @@ import Sudoku from '../sudoku/sudoku';
 // содержимое этого блока выводится на печать
 const Preview = () => {
   const store = useSelector(state => state);
+
+
+  // вызывается при обновлении store.fluids
+  useEffect(() => {
+
+    // если есть созданные судоку
+    if (store.fluids.length) {
+      console.log(`Было создано ${store.params.pages * store.params.sudokuCount} судоку`);
+
+      window.print(); // вызвать диалоговое окно для печати
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [store.fluids]);
+
 
   return (
     <section className="preview-wp">

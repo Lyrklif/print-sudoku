@@ -51,8 +51,9 @@ input[type=number] {
 
 h1 {
   text-align: center;
-  opacity: 0.3;
+  opacity: 0.2;
   margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
 
@@ -74,13 +75,11 @@ button {
   cursor: pointer;
   color: inherit;
   text-transform: uppercase;
-  
+
   &:disabled {
-    cursor: not-allowed;
     opacity: 0.5;
-    background-color: transparent;
   }
-  
+
   &.loading {
     cursor: wait;
   }
@@ -91,8 +90,7 @@ button {
   padding-left: 1.5em;
   height: 3em;
   border-radius: $border-radius;
-
-  border: 1px solid $color-light;
+  border: 1px solid $color-main;
 
   transition: background-color $ease, opacity $ease;
 
