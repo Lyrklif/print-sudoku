@@ -1,8 +1,8 @@
 
-import { NUMBER_OF_SHEET } from "../../../constants/actionTypes";
+import { PAGES } from "../../../constants/actionTypes";
 
 export default (state = 1, action) => {
-  if (action.type === NUMBER_OF_SHEET) {
+  if (action.type === PAGES) {
     return action.value;
   } else {
     return state

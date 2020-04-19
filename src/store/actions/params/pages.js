@@ -1,8 +1,8 @@
-import { NUMBER_OF_SHEET } from "../../../constants/actionTypes";
+import { PAGES } from "../../../constants/actionTypes";
 
 export default (value) => {
   return {
-    type: NUMBER_OF_SHEET,
+    type: PAGES,
     value
   };
 }
