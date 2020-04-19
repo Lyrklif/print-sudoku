@@ -1,6 +1,6 @@
 {
-  "short_name": "Судоку",
-  "name": "Генератор судоку",
+  "short_name": "Судоку для печати",
+  "name": "Генератор судоку для печати",
   "icons": [
     {
       "src": "favicon.ico",
@@ -30,7 +30,7 @@
   ],
   "start_url": "https://lyrklif.github.io/print-sudoku/",
   "lang": "Russian",
-  "display": "fullscreen",
+  "display": "standalone",
   "theme_color": "#4e54c8",
   "background_color": "#ffffff"
 }

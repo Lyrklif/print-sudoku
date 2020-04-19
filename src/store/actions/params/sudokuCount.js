@@ -1,8 +1,8 @@
-import { BLOCKS_ON_SHEET } from "../../../constants/actionTypes";
+import { SUDOKU_COUNT } from "../../../constants/actionTypes";
 
 export default (value) => {
   return {
-    type: BLOCKS_ON_SHEET,
+    type: SUDOKU_COUNT,
     value
   };
 }

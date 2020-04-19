@@ -18,14 +18,14 @@ const SudokuCount = () => {
 
   return (
     <>
-      <span className="fluid-name">К-во судоку на&nbsp;странице</span>
+      <p className="fluid-name">К-во судоку на&nbsp;странице</p>
       <ul className="sudoku-count__list">
 
         {store.params.sudokuCountOptions.map((elem, i) => {
           return (
             <li className="sudoku-count__item" key={i}>
               <button
-                className={"sudoku-count__btn " + (elem === store.params.sudokuCount ? 'active' : '')}
+                className={"sudoku-count__btn btn-secondary " + (elem === store.params.sudokuCount ? 'active' : '')}
                 onClick={() => handleClick(elem)}
               >{elem}</button>
             </li>

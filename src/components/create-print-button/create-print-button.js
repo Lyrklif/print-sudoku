@@ -15,12 +15,11 @@ import Loader from '../loader/loader';
 
 
 // кнопки
-const Buttons = () => {
+const CreatePrintButton = () => {
   const store = useSelector(state => state);
   const dispatch = useDispatch();
   const length = levels[store.params.level].hiddenNumbers;
   const [progress, changeProgress] = useState(false); // прогресс создания судоку
-  const [created, changeCreated] = useState(false); // судоку созданы 
 
 
   // записать массив судоку в store
@@ -29,10 +28,7 @@ const Buttons = () => {
 
     setTimeout(() => {
       dispatch(fluids(createSudokuArray())); // записать новый массив судоку в store
-
       changeProgress(false);
-      changeCreated(true);
-
     }, 500);
   };
 
@@ -57,35 +53,23 @@ const Buttons = () => {
   };
 
 
-  // диалоговое окно для печати
-  const print = () => {
-    window.print();
-
-    changeCreated(false);
-    changeProgress(false);
-
-    dispatch(fluids([]));// очистить массив судоку в store
-  };
-
-
   return (
     <>
       <button
         disabled={progress}
         title={progress ? 'Судоку создаётся' : 'Создать судоку'}
-        className={"btn btn-primary panel__btn " + (progress && 'loading')}
-        onClick={setSudokuArray}>
-        {progress ? <Loader /> : <span>Создать судоку</span>}
+        className={"btn create-print-btn " + (progress ? 'loading btn-secondary' : 'btn-primary')}
+        onClick={setSudokuArray}
+      >
+        {progress ?
+          <Loader />
+          :
+          <span>Создать и&nbsp;распечатать</span>
+        }
       </button>
-
-      <button
-        disabled={!created}
-        title={created ? 'Распечатать' : 'Сначала нужно создать судоку'}
-        className="btn btn-secondary panel__btn"
-        onClick={print}>Распечатать</button>
     </>
   )
 };
 
-export default Buttons;
+export default CreatePrintButton;
 

@@ -2,6 +2,7 @@
   max-width: 100%;
   max-height: 100%;
   display: block;
+  color: $black;
 }
 
 .sudoku__content {
@@ -14,9 +15,9 @@
 
   font-weight: bold;
 
-  border-top: 0.5px solid black;
-  border-right: 0.5px solid black;
-  border-left: 0.5px solid black;
+  border-top: 0.5px solid $black;
+  border-right: 0.5px solid $black;
+  border-left: 0.5px solid $black;
 
   margin-left: auto;
   margin-right: auto;
@@ -25,8 +26,8 @@
 .sudoku__col {
   padding-bottom: 100%;
 
-  border-right: 0.5px solid black;
-  border-bottom: 0.5px solid black;
+  border-right: 0.5px solid $black;
+  border-bottom: 0.5px solid $black;
 
   display: flex;
   justify-content: center;
@@ -36,7 +37,7 @@
 }
 
 .sudoku__col:nth-of-type(3n) {
-  border-right: 2px solid black;
+  border-right: 2px solid $black;
 }
 
 .sudoku__col:nth-of-type(9n) {
@@ -62,7 +63,7 @@
 .sudoku__col:nth-of-type(52),
 .sudoku__col:nth-of-type(53),
 .sudoku__col:nth-of-type(54) {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $black;
 }
 
 .sudoku__number {

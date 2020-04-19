@@ -1,6 +1,3 @@
-
-
-
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
@@ -12,10 +9,7 @@ $white: #fff;
 $black: #000;
 
 $color-main: #009E8E;
-
-$color-dark: #00675C;
 $color-dark-faded: #1E776D;
-
 $color-light: #34CFBE;
 $color-light-faded: #5DCFC3;
 
@@ -25,3 +19,7 @@ $border-radius: .3em;
 $control-height: 3em;
 
 $ease: .3s ease-in-out;
+
+
+$hover-bg: rgba($color-light-faded, 0.2);
+$active-bg: rgba($color-light-faded, 0.3);

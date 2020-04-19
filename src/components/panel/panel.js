@@ -4,7 +4,7 @@ import SelectLevel from '../select-level/select-level';
 import SudokuCount from '../sudoku-count/sudoku-count';
 import SheetCount from '../sheet-count/sheet-count';
 
-import Buttons from '../buttons/buttons';
+import CreatePrintButton from '../create-print-button/create-print-button';
 
 
 // панель настроек параметров судоку
@@ -12,13 +12,15 @@ const Panel = () => {
 
   return (
     <section className="panel no-print">
-      <h1>Судоку</h1>
+      <header>
+        <h1>Судоку для печати</h1>
+      </header>
 
       <SelectLevel />
       <SudokuCount />
       <SheetCount />
 
-      <Buttons />
+      <CreatePrintButton />
 
     </section>
   )
