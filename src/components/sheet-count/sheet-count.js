@@ -36,9 +36,7 @@ const SheetCount = () => {
 
   return (
     <>
-      <label className="sheet-count" for="sheet">
-        <span className="fluid-name">К-во страниц</span>
-      </label>
+      <label className="fluid-name" for="sheet">К-во страниц</label>
 
       <div className="sheet-count__controls-group">
 

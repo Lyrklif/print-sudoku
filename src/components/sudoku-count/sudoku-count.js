@@ -18,7 +18,7 @@ const SudokuCount = () => {
 
   return (
     <>
-      <span className="fluid-name">К-во судоку на&nbsp;странице</span>
+      <p className="fluid-name">К-во судоку на&nbsp;странице</p>
       <ul className="sudoku-count__list">
 
         {store.params.sudokuCountOptions.map((elem, i) => {

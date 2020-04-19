@@ -19,10 +19,10 @@ const SelectLevel = () => {
 
   return (
     <>
-      <span className="fluid-name">Уровень сложности</span>
+      <label className="fluid-name" for="select-level">Уровень сложности</label>
 
       <div className="select">
-        <select className="select__content" value={store.params.level} onChange={handleChange}>
+        <select className="select__content" id="select-level" value={store.params.level} onChange={handleChange}>
 
           {levels.map((elem, i) => {
             return (
