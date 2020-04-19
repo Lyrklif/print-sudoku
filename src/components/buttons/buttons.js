@@ -73,7 +73,7 @@ const Buttons = () => {
       <button
         disabled={progress}
         title={progress ? 'Судоку создаётся' : 'Создать судоку'}
-        className={"btn btn-primary panel__btn " + (progress && 'loading')}
+        className={"btn panel__btn " + (progress ? 'loading ' : '') + (created ? 'btn-secondary ' : 'btn-primary ')}
         onClick={setSudokuArray}>
         {progress ? <Loader /> : <span>Создать судоку</span>}
       </button>
@@ -81,7 +81,7 @@ const Buttons = () => {
       <button
         disabled={!created}
         title={created ? 'Распечатать' : 'Сначала нужно создать судоку'}
-        className="btn btn-secondary panel__btn"
+        className={"btn panel__btn " + (created ? 'btn-primary ' : 'btn-secondary ')}
         onClick={print}>Распечатать</button>
     </>
   )
