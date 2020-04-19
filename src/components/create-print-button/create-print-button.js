@@ -58,7 +58,7 @@ const CreatePrintButton = () => {
       <button
         disabled={progress}
         title={progress ? 'Судоку создаётся' : 'Создать судоку'}
-        className={"btn panel__btn " + (progress ? 'loading btn-secondary' : 'btn-primary')}
+        className={"btn create-print-btn " + (progress ? 'loading btn-secondary' : 'btn-primary')}
         onClick={setSudokuArray}
       >
         {progress ?

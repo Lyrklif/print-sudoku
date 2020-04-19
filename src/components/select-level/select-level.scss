@@ -1,24 +1,4 @@
-/* Reset Select */
-.select__content {
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border-color: $color-main;
-  border-radius: $border-radius;
 
-  color: inherit;
-  background-color: rgba($color-light-faded, 0.3);
-
-  option {
-    color: $black;
-    background-color: $white;
-  }
-}
-
-/* Remove IE arrow */
-.select__content::-ms-expand {
-  display: none;
-}
 
 /* Custom Select */
 .select {
@@ -33,8 +13,6 @@
 
 .select__content {
   flex: 1;
-  padding: 0 .5em;
-  cursor: pointer;
 }
 
 /* Arrow */

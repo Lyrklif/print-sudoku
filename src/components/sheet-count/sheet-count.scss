@@ -1,28 +1,11 @@
-.sheet-count {}
 
-.sheet-count__input {
-  border: none;
-  border: 1px solid $color-main;
-
-  border-radius: $border-radius;
-  box-shadow: none;
-
-  height: $control-height;
-  width: 100%;
-  max-width: 100%;
-  padding: 0 1em;
-
-  color: inherit;
-  background-color: rgba($color-light-faded, .3);
-}
 
 .sheet-count__controls-group {
   display: flex;
   align-items: center;
 }
 
-.sheet-count__btn_minus,
-.sheet-count__btn_plus {
+.sheet-count__btn {
   max-width: 5em;
 }
 
@@ -34,9 +17,9 @@
 }
 
 .sheet-count__btn_minus {
-  border-radius: 3px 0 0 3px;
+  border-radius: $border-radius 0 0 $border-radius;
 }
 
 .sheet-count__btn_plus {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 $border-radius $border-radius 0;
 }

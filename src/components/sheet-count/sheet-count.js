@@ -44,11 +44,11 @@ const SheetCount = () => {
 
         <button
           onClick={minus}
-          className="btn btn-secondary sheet-count__btn_minus">-</button>
+          className="btn btn-secondary sheet-count__btn sheet-count__btn_minus">-</button>
 
         <input
           className="sheet-count__input"
-          if="sheet"
+          id="sheet"
           value={store.params.pages}
           type="number"
           min="1"
@@ -58,7 +58,7 @@ const SheetCount = () => {
 
         <button
           onClick={plus}
-          className="btn btn-secondary sheet-count__btn_plus">+</button>
+          className="btn btn-secondary sheet-count__btn sheet-count__btn_plus">+</button>
       </div>
     </>
   )

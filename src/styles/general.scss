@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  overflow-x: hidden;
+  color: $white;
 }
 
 .root {
@@ -27,27 +27,90 @@ body {
 
 
 * {
-  outline: $color-main;
+  outline: none;
   box-sizing: border-box;
 
   &::before,
   *::after {
-    outline: $color-main;
+    outline: none;
     box-sizing: border-box;
   }
 }
+
+input {
+  border: none;
+  border: 1px solid $color-main;
+
+  border-radius: $border-radius;
+  box-shadow: none;
+
+  height: $control-height;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1em;
+
+  color: inherit;
+  background-color: $hover-bg;
+
+  transition: background-color $ease;
+
+  &:active {
+    background-color: $active-bg;
+  }
+
+  @media screen and (min-width: $lg) {
+    &:hover {
+      background-color: $active-bg;
+    }
+  }
+}
+
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-
 input[type=number] {
   -moz-appearance: textfield;
   -webkit-appearance: none;
 }
 
+
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border-color: $color-main;
+  border-radius: $border-radius;
+
+  color: inherit;
+  background-color: $hover-bg;
+
+  padding: 0 1em;
+  cursor: pointer;
+  transition: background-color $ease;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:active {
+    background-color: $active-bg;
+  }
+
+  @media screen and (min-width: $lg) {
+    &:hover {
+      background-color: $active-bg;
+    }
+  }
+}
+
+
+option {
+  color: $black;
+  background-color: $white;
+}
 
 h1 {
   text-align: center;
@@ -69,12 +132,23 @@ ol {
 
 
 button {
+  display: block;
+  color: inherit;
   background: none;
   box-shadow: none;
-  border: none;
   cursor: pointer;
-  color: inherit;
-  text-transform: uppercase;
+
+  border: 1px solid $color-main;
+  border-radius: $border-radius;
+
+  width: 100%;
+  height: 3em;
+
+  padding-right: 1em;
+  padding-left: 1em;
+
+  transition: background-color $ease, opacity $ease;
+
 
   &:disabled {
     opacity: 0.5;
@@ -85,18 +159,6 @@ button {
   }
 }
 
-.btn {
-  padding-right: 1.5em;
-  padding-left: 1.5em;
-  height: 3em;
-  border-radius: $border-radius;
-  border: 1px solid $color-main;
-
-  transition: background-color $ease, opacity $ease;
-
-  width: 100%;
-  display: block;
-}
 
 .btn-primary {
   background-color: $color-light;
@@ -110,18 +172,16 @@ button {
       background-color: transparent;
     }
   }
-
 }
 
 .btn-secondary {
   &:active {
-    background-color: $color-light;
+    background-color: $active-bg;
   }
 
   @media screen and (min-width: $lg) {
-
     &:hover {
-      background-color: $color-light;
+      background-color: $active-bg;
     }
   }
 
@@ -129,12 +189,15 @@ button {
     background-color: transparent;
   }
 
+  &.active {
+    background-color: $hover-bg;
+  }
+
 }
 
 
 .fluid-name {
   display: block;
-  width: 100%;
   margin-top: 1.5em;
   margin-bottom: 1em;
 }

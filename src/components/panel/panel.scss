@@ -1,12 +1,8 @@
 .panel {
-  padding: 60px 0;
-  color: $white;
-
+  margin: 60px auto;
 
   width: 90vw;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 
   @media screen and (min-width: $md) {
     width: 500px;
