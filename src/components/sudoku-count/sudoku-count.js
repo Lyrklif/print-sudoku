@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import sudokuCount from '../../store/actions/params/sudokuCount';
+import sudokuCountOptions from '../../constants/sudokuCountOptions';
 
 
 // задать к-во судоку на странице
@@ -21,7 +22,7 @@ const SudokuCount = () => {
       <p className="fluid-name">К-во судоку на&nbsp;странице</p>
       <ul className="sudoku-count__list">
 
-        {store.params.sudokuCountOptions.map((elem, i) => {
+        {sudokuCountOptions.map((elem, i) => {
           return (
             <li className="sudoku-count__item" key={i}>
               <button
