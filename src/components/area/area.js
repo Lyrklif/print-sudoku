@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // область с анимационными блоками (анимационный фон)
 const Area = () => {

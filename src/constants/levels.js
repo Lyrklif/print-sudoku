@@ -3,6 +3,11 @@
 
 export default [
   {
+    name: 'empty',
+    title: 'Пустые (шаблоны)',
+    hiddenNumbers: 81,
+  },
+  {
     name: 'easy',
     title: 'Легко',
     hiddenNumbers: 40,

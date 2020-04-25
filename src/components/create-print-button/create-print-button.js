@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import levels from '../../constants/levels';
@@ -44,12 +44,22 @@ const CreatePrintButton = () => {
       for (let z = 0; z < blocks; ++z) {
 
         // удалить из массива судоку несколько чисел, к-во зависит от уровня сложности 
-        let completeArray = getClearedArrayByIndexes(getSudokuArray(), getUniqueNumbersArray(length, 0, 80));
+        let completeArray = length === 81 ? getEmptyArray() : getArray();
         array[i][z] = completeArray;
       }
     }
 
     return array;
+  };
+
+  // вернуть массив судоку
+  const getArray = () => {
+    return getClearedArrayByIndexes(getSudokuArray(), getUniqueNumbersArray(length, 0, 80));
+  };
+
+  // вернуть пустой массив
+  const getEmptyArray = () => {
+    return [...Array(length)]; // указано к-во пустых ячеек
   };
 
 

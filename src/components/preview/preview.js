@@ -26,6 +26,9 @@ const Preview = () => {
 
   return (
     <section className="preview-wp">
+      <header className="hide no-print">
+        <h2>Превью созданных судоку</h2>
+      </header>
 
       {store.fluids.map((block, index) => {
         return (
