@@ -1,5 +1,3 @@
-// loader
-
 
 import React from 'react';
 

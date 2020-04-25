@@ -12,8 +12,8 @@ const Panel = () => {
 
   return (
     <section className="panel no-print">
-      <header>
-        <h1>Судоку для печати</h1>
+      <header className="hide">
+        <h2>Панель параметров</h2>
       </header>
 
       <SelectLevel />
