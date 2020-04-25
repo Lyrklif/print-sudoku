@@ -58,7 +58,7 @@ input {
     background-color: $active-bg;
   }
 
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $sm) {
     &:hover {
       background-color: $active-bg;
     }
@@ -99,7 +99,7 @@ select {
     background-color: $active-bg;
   }
 
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $sm) {
     &:hover {
       background-color: $active-bg;
     }
@@ -167,7 +167,7 @@ button {
     background-color: transparent;
   }
 
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $sm) {
     &:hover {
       background-color: transparent;
     }
@@ -179,7 +179,7 @@ button {
     background-color: $active-bg;
   }
 
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $sm) {
     &:hover {
       background-color: $active-bg;
     }
